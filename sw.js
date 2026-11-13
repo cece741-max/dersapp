@@ -11,3 +11,14 @@ self.addEventListener('notificationclick', e => {
     return clients.openWindow(url);
   }));
 });
+
+self.addEventListener('fetch', e => {
+  const r = e.request;
+  if (r.method !== 'GET' || r.mode !== 'navigate' || new URL(r.url).origin !== location.origin) return;
+  e.respondWith(caches.open('dersapp-sayfa').then(async c => {
+    const eski = await c.match(r, { ignoreSearch: true });
+    const yeni = fetch(r).then(res => { if (res.ok) c.put(r, res.clone()); return res; });
+    if (eski) { yeni.catch(() => {}); return eski; }
+    return yeni;
+  }));
+});
