@@ -212,6 +212,19 @@ details.more .item{margin-bottom:8px;background:var(--bg)}
 .awst{position:relative;overflow:hidden;border-left:0;padding-left:16px}.awst::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--s-no)}
 .awst.ok::before{background:var(--s-ok)}.awst.part::before{background:linear-gradient(180deg,#4C9BE8 50%,#E5202E 50%)}
 .awtog{background:var(--s-no);color:var(--s-no-t)}.awst.ok .awtog{background:var(--s-ok);color:var(--s-ok-t)}.awst.part .awtog{background:var(--s-part);color:var(--s-part-t)}
+
+/* Devam çizelgesi */
+.awseg{display:flex;padding:4px;margin:0 0 14px;border-radius:14px;background:var(--cd)}.awseg button{flex:1;height:38px;border:0;border-radius:11px;background:none;color:var(--mu);font:600 14px inherit;font-family:inherit;cursor:pointer}.awseg button.on{background:var(--ln);color:var(--tx)}
+.gsums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.gsum{display:flex;flex-direction:column;gap:2px;padding:12px;border:2px solid transparent;border-radius:16px;background:var(--cd);color:var(--tx);font:inherit;text-align:left;cursor:pointer}.gsum b{font-size:26px;font-weight:700;line-height:1}.gsum span{font-size:12px;color:var(--mu)}
+.gsum.good b{color:#7DE0A6}.gsum.warn b{color:#F5B544}.gsum.bad b{color:#FF8A8F}.gsum.on.good{border-color:#3FB97B}.gsum.on.warn{border-color:#F5B544}.gsum.on.bad{border-color:#E5202E}
+.gst{margin-bottom:8px;padding:14px;border-radius:16px;background:var(--cd);display:flex;flex-direction:column;gap:10px}.gtop{display:flex;align-items:center;gap:10px}
+.gpct{font-size:20px;font-weight:700}.gst.bad .gpct{color:#FF8A8F}
+.gpill{flex:none;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:12px;font-size:12px;font-weight:600}.gpill i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.gpill.good,.gpill.pass{background:#12301F;color:#7DE0A6}.gpill.warn{background:#3A2C0E;color:#F5B544}.gpill.bad{background:#3A1616;color:#FF8A8F}
+.gcells{display:flex;flex-wrap:wrap;gap:4px}.gc{display:inline-block;width:18px;height:24px;border-radius:5px;background:var(--ln)}
+.gc.ok{background:var(--s-ok)}.gc.no{background:var(--s-no)}.gc.part{background:var(--s-part)}.gc.hol{background:var(--s-hol)}.gc.fut{background:none;border:1px dashed var(--ln)}
+.gleg{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px}.gleg span{display:flex;align-items:center;gap:6px}.gleg .gc{width:12px;height:12px;border-radius:4px}
 </style>
 </head>
 <body>
