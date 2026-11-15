@@ -197,6 +197,16 @@ details.more .item{margin-bottom:8px;background:var(--bg)}
 
 .livej{flex-wrap:wrap}.livewarn{margin-top:8px;padding:8px 10px;border-radius:10px;background:rgba(0,0,0,.25);color:#FFD9A0;font-size:12px;line-height:1.4}
 .liveask{display:flex;flex-direction:column;gap:8px;width:100%}.liveask .btn{width:100%}.livej.done .livewarn{display:none}
+
+/* Durum renkleri (B2, krem tatil): katıldı mavi, gelmedi parlak kırmızı, kısmi yarı mavi yarı kırmızı, tatil krem */
+:root{--s-ok:#4C9BE8;--s-ok-t:#041C33;--s-no:#E5202E;--s-no-t:#fff;--s-part:linear-gradient(135deg,#4C9BE8 50%,#E5202E 50%);--s-part-t:#0B1118;--s-hol:#E6D5A8;--s-hol-t:#3B2F12}
+.wkc.ok,.pill.ok{background:var(--s-ok);color:var(--s-ok-t)}.wkc.no,.pill.no{background:var(--s-no);color:var(--s-no-t)}
+.wkc.part,.pill.part{background:var(--s-part);color:var(--s-part-t)}.wkc.hol,.pill.hol{background:var(--s-hol);color:var(--s-hol-t)}
+.d.ok{background:var(--s-ok)}.d.no{background:var(--s-no)}.d.part{background:var(--s-part)}.d.hol{background:var(--s-hol)}
+.awno{background:var(--s-ok);color:var(--s-ok-t)}.awrow.hol{opacity:1}.awrow.hol .awno{background:var(--s-hol);color:var(--s-hol-t)}
+.awst{position:relative;overflow:hidden;border-left:0;padding-left:16px}.awst::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--s-no)}
+.awst.ok::before{background:var(--s-ok)}.awst.part::before{background:linear-gradient(180deg,#4C9BE8 50%,#E5202E 50%)}
+.awtog{background:var(--s-no);color:var(--s-no-t)}.awst.ok .awtog{background:var(--s-ok);color:var(--s-ok-t)}.awst.part .awtog{background:var(--s-part);color:var(--s-part-t)}
 </style>
 </head>
 <body>
